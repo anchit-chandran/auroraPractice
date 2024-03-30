@@ -26,7 +26,7 @@ function Main() {
         <MainText />
       </View>
       <View style={{ width: "100%", marginBottom: 50 }}>
-        <Button mode="contained-tonal" labelStyle={styles.buttonText} buttonColor="white">Let's get started</Button>
+        <Button mode="contained-tonal" labelStyle={styles.buttonText} buttonColor="white" onPress={()=>console.log('press')}>Let's get started</Button>
       </View>
     </View>
   );
