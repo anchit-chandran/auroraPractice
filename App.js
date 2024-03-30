@@ -5,7 +5,7 @@ import Main from './components/Main';
 import { LinearGradient } from "expo-linear-gradient";
 import * as Font from 'expo-font';
 import { globalStyles } from './assets/styles/globalStyles';
-
+import { PaperProvider } from 'react-native-paper';
 
 
 export default function App() {
@@ -46,16 +46,18 @@ export default function App() {
   }
 
   return (
-    <View style={globalStyles.container}>
-      <LinearGradient
-        // Button Linear Gradient
-        colors={["rgb(251,210,217)", "rgb(120,181,254)", "rgb(171,239,255)"]}
-        style={globalStyles.background}
-      >
-        <Main />
-      </LinearGradient>
-      <StatusBar style="auto" />
-    </View>
+    <PaperProvider>
+      <View style={globalStyles.container}>
+        <LinearGradient
+          // Button Linear Gradient
+          colors={["rgb(251,210,217)", "rgb(120,181,254)", "rgb(171,239,255)"]}
+          style={globalStyles.background}
+        >
+          <Main />
+        </LinearGradient>
+        <StatusBar style="auto" />
+      </View>
+    </PaperProvider>
   );
 }
 
